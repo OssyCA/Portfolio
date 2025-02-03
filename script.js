@@ -26,3 +26,7 @@ document.getElementById("easterEgg").addEventListener("click", function() {
         section.classList.add("rotate-animation");
     }
 });
+
+document.getElementById("contactBtn").addEventListener("click", () => {
+    document.getElementById("contact").scrollIntoView({behavior: "smooth"});
+});
