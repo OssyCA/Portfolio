@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/cb19c9f494.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="body">
+    <header>
+        <h1>Ossy Portfolio</h1>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+        <nav>
+            <ul>
+                <li><a href="#About_me">About</a></li>
+                <li><a href="#projects">Projekt</a></li>
+                <li><a href="#cv">CV</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="About_me" id="About_me">
+            <h2>About me</h2>
+            <img src="vikingLogo.webp" alt="vikingLogo">
+            <div class="about_me_text">
+                <p> 
+                    I am a Swedish full-stack .NET developer with experience in building robust, user-friendly applications. I
+                    specialize in delivering end-to-end solutions,
+                    combining clean code with seamless user experiences.
+                    My passion for problem-solving
+                    and continuous <a href="#" id="easterEgg" style="text-decoration: none; color: inherit;">learning</a> ensures innovative results
+                    in every project.
+                </p>
+                
+                <button class="contactBtn">Contact Me</button>
+            </div>
+        </section>
+        
+        <section class="skills">
+            <h2>Skills</h2>
+            <div>
+                <ul class="skills_list">
+                    <li>HTML <progress value="80" max="100"></progress></li>
+                    <li>CSS <progress value="75" max="100"></progress></li>
+                    <li>JavaScript <progress value="70" max="100"></progress></li>
+                </ul>
+            </div>
+            <div>
+                <ul class="skills_list">
+                    <li>C# <progress value="85" max="100"></progress></li>
+                    <li>SQL Server <progress value="80" max="100"></progress></li>
+                    <li>Python <progress value="75" max="100"></progress></li>
+                    
+                </ul>
+            </div>
+        </section>
+        
+
+        <section class="projects" id="projects">
+            
+            <h2>Projects</h2>
+            <div>
+            <h3>Project 1</h3>
+            <figure>
+                <img src="project1.jpg" alt="Project 1">
+                <figcaption>Project 1 description</figcaption>
+            </figure>
+            </div>
+            <div>
+            <h3>Project 2</h3>
+            <figure>
+                <img src="project2.jpg" alt="Project 2">
+                <figcaption>Project 2 description</figcaption>
+            </figure>
+            </div>
+            <div>
+            <h3>Project 3</h3>
+            <figure>
+                <img src="project3.jpg" alt="Project 3">
+                <figcaption>Project 3 description</figcaption>
+            </figure>
+            </div>
+            <div>
+            <h3>Project 4</h3>
+            <figure>
+                <img src="project4.jpg" alt="Project 4">
+                <figcaption>Project 4 description</figcaption>
+            </figure>
+            </div>
+        </section>
+
+        <section class="Cv" id="cv">
+            <!-- Education Section -->
+            <div class="education">
+                <h3>Education</h3>
+                <ul class="cvlist">
+                    <li>
+                        <strong>Fullstack-utveckling</strong> - Chas Academy, Stockholm (Sep 2024 - Pågående)
+                        <p>Studerar frontend- och backend-programmering med fokus på systemutveckling.</p>
+                    </li>
+                    <li>
+                        <strong>Fordon och Transport</strong> - Jämtlands Gymnasium, Åre (Aug 2018 - Jun 2020)
+                        <p>Fokus på fordonsunderhåll och teknik.</p>
+                    </li>
+                </ul>
+            </div>
+        
+            <!-- Work Experience Section -->
+            <div class="work_experience">
+                <h3>Experience</h3>
+                <ul class="cvlist">
+                    <li>
+                        <strong>Städare</strong> - Snällstäd, Åre (Jul 2022 - Aug 2024)
+                        <p>Ansvarade för städning och underhåll av olika typer av lokaler. Utförde både daglig rengöring och djupstädning för att upprätthålla en hygienisk miljö.</p>
+                    </li>
+                    <li>
+                        <strong>Nattjobb, Hotell</strong> - Copperhill Mountain Lodge, Åre (Maj 2024 - Jul 2024)
+                        <p>Skötsel och säkerhetsinspektioner av hotellets allmänna utrymmen under nattetid.</p>
+                    </li>
+                    <li>
+                        <strong>Lokalvårdare</strong> - Åre Kommun, Åre (Jun 2024 - Aug 2024)
+                        <p>Ansvarade för lokalvård och underhåll av fastigheter.</p>
+                    </li>
+                    <li>
+                        <strong>Fastighetsskötare & Parkarbetare</strong> - Åre Kommun, Åre (Apr 2022 - Jul 2022)
+                        <p>Underhåll av grönområden och fastigheter med uppgifter som trädgårdsskötsel och reparation.</p>
+                    </li>
+                    <li>
+                        <strong>Byggarbetare</strong> - Husfabriken, Åre (Jan 2021 - Apr 2021)
+                        <p>Deltog i byggnation av ekohus med fokus på hållbarhet och praktiska byggkunskaper.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="form_section" id="contact">
+            <h2>Contact</h2>
+            <form action="index.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit" id="submit">Send</button>
+
+            </form>
+        </section>
+        
+    </main>
+    <footer>
+        <div class="footer_links">
+            <a href="https://www.linkedin.com/in/ossy-drakeneld-0aba542b8/" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/OssyCA" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>

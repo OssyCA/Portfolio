@@ -1,0 +1,478 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Custom CSS */
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevents horizontal scroll */
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+    
+}
+
+h1 {
+    color: white;
+    margin-left: 1em;
+    font-size: 1.8em;
+}
+
+section{
+    border: 1px solid #9b109b;
+    box-shadow: 0 0 20px #9b109b;
+    border-radius: 10px;
+    padding: 1em;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto ;
+}
+
+/* CONTAINER TO KEEP CONTENT CENTERED */
+.container {
+    width: 100%;
+    max-width: 1200px; /* Prevents content from stretching too wide */
+    margin: 0 auto;
+    padding: 1em;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.1em 1em;
+    background: linear-gradient(#781878, #000000);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* NAVIGATION - Horizontal on large screens */
+nav {
+    display: flex;
+}
+
+nav ul {
+    display: flex; /* Keeps links in a row */
+    list-style: none;
+    gap: 1.5em; /* Space between links */
+    padding: 1em;
+    margin: 1em;
+}
+
+nav li {
+    margin: 0; /* Removes any margin */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* HAMBURGER ICON */
+.hamburger {
+    font-size: 2em;
+    cursor: pointer;
+    color: white;
+    display: none; /* Hidden on larger screens */
+}
+
+/* HIDE CHECKBOX */
+#menu-toggle {
+    display: none;
+}
+
+/* MOBILE VERSION */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger on small screens */
+    }
+
+    /* Hide navigation menu */
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: black;
+        width: 100%;
+        text-align: center;
+        padding: 1em 0;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack links on mobile */
+        gap: 1em;
+    }
+
+    nav li {
+        margin: 1em 0;
+    }
+
+    /* SHOW MENU WHEN CHECKBOX IS CHECKED */
+    #menu-toggle:checked + .hamburger + nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* MAIN CONTENT */
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1em;
+}
+
+/* ABOUT ME SECTION */
+.About_me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    width: 90%;
+    margin-top: 8em;
+}
+
+.About_me img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-bottom: 1em;
+}
+
+.about_me_text {
+    width: 100%;
+    font-size: 1.1em;
+}
+
+.contactBtn{
+    padding: 1em;
+    background-color: #781878;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 1em;
+}
+
+/* SKILLS SECTION */
+
+.skills {
+    display: flex;
+    justify-content: space-between; /* Even distribution */
+    flex-wrap: wrap; /* Adapts to smaller screens */
+    gap: 2em;
+    margin-top: 2em;
+    width: 90%;
+    max-width: 800px;
+    margin-top: 8em;
+}
+.skills div {
+    flex: 1;
+    min-width: 250px; /* Prevents columns from becoming too narrow */
+    padding: 1em;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #9b109b;
+    text-align: center;
+}
+
+.skills_list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills_list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.8em 0;
+    font-size: 1.1em;
+}
+
+.skills_list{
+    list-style: none;
+}
+
+.skills_list li {
+    margin: 0.5em 1rem;
+}
+
+progress {
+    width: 100%;
+    max-width: 200px; /* Adjust as needed */
+}
+
+/* PROJECTS SECTION */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5em;
+    text-align: center;
+    width: 90%;
+    max-width: 800px; /* Same as other sections */
+    margin: 0 auto;
+    margin-top: 8em;
+}
+
+.projects h2 {
+    grid-column: 1 / -1; /* Makes h2 span the entire width */
+}
+
+.projects div {
+    background-color: #222;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.projects img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* CV SECTION */
+.Cv {
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 10em;
+    margin-top: 8em;
+}
+
+.work_experience, .education {
+    margin-top: 2em;
+}
+
+.cvlist {
+    list-style: none;  
+}
+
+.cvlist li {
+    margin: 1em 0;
+    padding: 1.5em; /* More padding for a spacious look */
+    border: 1px solid #9b109b;
+    border-radius: 10px; /* Rounded corners */
+    background: rgba(0, 0, 0, 0.1); /* Dark purple transparent background */
+    box-shadow: 0 0 15px rgba(155, 16, 155, 0.5); /* Glow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for better interactivity */
+.cvlist li:hover {
+    transform: translateY(-5px); /* Lift up on hover */
+    box-shadow: 0 0 20px rgba(155, 16, 155, 0.8);
+}
+
+/* Text improvement in the list */
+.cvlist li strong {
+    font-size: 1.2em; /* Make titles a bit larger */
+    color: #e6e6e6; /* Lighter color for contrast */
+}
+
+.cvlist li p {
+    margin-top: 0.5em;
+    font-size: 1em;
+    color: #cccccc; /* Slightly lighter gray for better readability */
+}
+
+/* CONTACT FORM */
+.form_section {
+    border: 1px solid #9b109b;
+    box-shadow: 0 0 100px #9b109b;
+    border-radius: 10px;
+    padding: 1em;
+    width: 90%;
+    max-width: 600px;
+    margin-top: 2em;
+    margin-bottom: 10em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.7em;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+    resize: none;
+}
+
+button {
+    padding: 0.8em;
+    background-color: #781878;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+button:hover {
+    background-color: #840695;
+}
+
+/* FOOTER */
+/* FOOTER */
+footer {
+    width: 100%;
+    min-height: 6vh;
+    background: linear-gradient(135deg, #000000, #781878);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0px -2px 10px rgba(120, 24, 120, 0.5);
+}
+
+.footer_links {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    font-size: 1.5em;
+}
+
+.footer_links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+ /* Underline effect */
+.footer_links a::after { 
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.footer_links a:hover::after {
+    width: 100%;
+}
+
+.footer_links a:hover {
+    color: #ff00ff;
+    text-shadow: 0px 0px 8px rgba(255, 0, 255, 0.8);
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .About_me img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .about_me_text, .Cv, .form_section {
+        width: 100%;
+    }
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    progress {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 360px) {
+    h1 {
+        font-size: 1.3em;
+    }
+
+    nav a {
+        font-size: 1em;
+    }
+
+    .About_me img {
+        width: 120px;
+        height: 120px;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 0.6em;
+    }
+}
+
+/* ANIMATIONS/Easteregg */
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate-animation {
+    animation: rotate 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+}
