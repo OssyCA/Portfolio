@@ -1,4 +1,27 @@
 
+// variables
+const discBtn = document.getElementById("discBtn");
+const contactBtn = document.getElementById("contactBtn");
+const rotateEgg = document.getElementById("easterEgg");
+const headerEasterEgg = document.getElementById("headerEasterEgg");
+
+// Easter egg 1337
+const sequence = ["1", "3", "3", "7"]; 
+let inputSequence = []; 
+document.addEventListener("keydown", (event) => { // When a key is pressed
+  const key = event.key;
+
+  inputSequence.push(key); 
+  if (inputSequence.join("").startsWith(sequence.join("").slice(0, inputSequence.length))) {
+    if (inputSequence.length === sequence.length) {
+      alert("You found the easter egg!");
+      inputSequence = []; 
+    }
+  } else {
+    inputSequence = [];
+  }
+});
+
 // Easter egg blue background
 function activateBlueTheme() {
   const inputNameEgg = document.querySelector("#name");
@@ -28,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () { // When the page is 
 });
 
 // Easter egg rotate
-const rotateEgg = document.getElementById("easterEgg");
+
 if (rotateEgg) {
   rotateEgg.addEventListener("click", function () {
     const section = document.querySelector("section");
@@ -41,32 +64,11 @@ if (rotateEgg) {
   });
 }
 
-const headerEasterEgg = document.getElementById("headerEasterEgg");
 if (headerEasterEgg) {
   headerEasterEgg.addEventListener("click", () => {
     document.body.style.backgroundColor = "green";
   });
 }
-
-// Easter egg 1337
-const sequence = ["1", "3", "3", "7"]; 
-let inputSequence = []; 
-
-document.addEventListener("keydown", (event) => { // When a key is pressed
-  const key = event.key;
-
-  inputSequence.push(key); 
-  if (inputSequence.join("").startsWith(sequence.join("").slice(0, inputSequence.length))) {
-    if (inputSequence.length === sequence.length) {
-      alert("You found the easter egg!");
-      inputSequence = []; 
-    }
-  } else {
-    inputSequence = [];
-  }
-});
-
-const discBtn = document.getElementById("discBtn");
 
 if (discBtn) {
   discBtn.addEventListener("click", () => {
@@ -74,7 +76,11 @@ if (discBtn) {
   });
 }
 
-
+if (contactBtn) {
+  contactBtn.addEventListener("click", () => {
+    window.location.href = "contact.html"
+  });
+}
 
 
 console.log("Script loaded"); // remove this line once you have confirmed that the script is linked

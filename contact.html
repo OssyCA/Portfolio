@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Ossy website</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <script src="https://kit.fontawesome.com/cb19c9f494.js" crossorigin="anonymous"></script>
@@ -27,19 +27,26 @@
         </nav>
     </header>
     <main>
-        <section class="form_section" id="contact">
-            <h2>Contact</h2>
-            <form action="index.php" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit" id="submit">Send</button>
-
-            </form>
-        </section>
+        <div class="contactContainer">
+            <section class="form_section" id="contact">
+                <h2>Contact</h2>
+                <form action="index.php" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit" id="submit">Send</button>
+                </form>
+            </section>
+    
+            <section class="contact_info">
+                <h3>Contact me directly:</h3>
+                <p id="mail">Ossy.Drakeneld@chasacademy.com</p>
+                <p>070-4959044</p>
+            </section>
+        </div>
         
     </main>
     <footer>
