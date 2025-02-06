@@ -14,7 +14,6 @@ function activateBlueTheme() {
     body.style.backgroundColor = "blue";
   }
 }
-const submitButton = document.querySelector("#submit");
 
 // Easter egg blue background
 document.addEventListener("DOMContentLoaded", function () { // When the page is loaded
@@ -29,33 +28,37 @@ document.addEventListener("DOMContentLoaded", function () { // When the page is 
 });
 
 // Easter egg rotate
-document.getElementById("easterEgg").addEventListener("click", () => {
-  let section = document.querySelector("section");
+const rotateEgg = document.getElementById("easterEgg");
+if (rotateEgg) {
+  rotateEgg.addEventListener("click", function () {
+    const section = document.querySelector("section");
 
-  if (section.classList.contains("rotate-animation")) {
-    // If the section has the class rotate-animation
-    section.classList.remove("rotate-animation");
-  } else {
-    section.classList.add("rotate-animation");
-  }
-});
+    if (section.classList.contains("rotate-animation")) {
+      section.classList.remove("rotate-animation");
+    } else {
+      section.classList.add("rotate-animation");
+    }
+  });
+}
 
-// Easter egg green background
-document.getElementById("headerEasterEgg").addEventListener("click", () => {
-  document.body.style.backgroundColor = "green";
-});
+const headerEasterEgg = document.getElementById("headerEasterEgg");
+if (headerEasterEgg) {
+  headerEasterEgg.addEventListener("click", () => {
+    document.body.style.backgroundColor = "green";
+  });
+}
 
 // Easter egg 1337
 const sequence = ["1", "3", "3", "7"]; 
 let inputSequence = []; 
 
-document.addEventListener("keydown", (event) => {
+document.addEventListener("keydown", (event) => { // When a key is pressed
   const key = event.key;
 
-  inputSequence.push(key); // 
+  inputSequence.push(key); 
   if (inputSequence.join("").startsWith(sequence.join("").slice(0, inputSequence.length))) {
     if (inputSequence.length === sequence.length) {
-      alert("You found the 1337 easter egg!");
+      alert("You found the easter egg!");
       inputSequence = []; 
     }
   } else {
@@ -63,5 +66,15 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+const discBtn = document.getElementById("discBtn");
 
-console.log("Script loaded");
+if (discBtn) {
+  discBtn.addEventListener("click", () => {
+    window.location.href = "about.html"
+  });
+}
+
+
+
+
+console.log("Script loaded"); // remove this line once you have confirmed that the script is linked
