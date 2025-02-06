@@ -86,6 +86,11 @@ nav a {
     font-size: 1.2em;
 }
 
+nav a:hover {
+    color: #ff00ff;
+    text-shadow: 0px 0px 8px rgba(255, 0, 255, 0.8);
+}
+
 /* HAMBURGER ICON */
 .hamburger {
     font-size: 2em;
@@ -150,14 +155,14 @@ main {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    max-width: 800px;
+    max-width: 50em;
     width: 90%;
     margin-top: 8em;
 }
 
 .About_me img {
-    width: 180px;
-    height: 180px;
+    width: 11em;
+    height: 11em;
     border-radius: 50%;
     margin-bottom: 1em;
 }
@@ -187,7 +192,7 @@ main {
     gap: 2em;
     margin-top: 2em;
     width: 90%;
-    max-width: 800px;
+    max-width: 50em;
     margin-top: 8em;
 }
 .skills div {
@@ -258,7 +263,7 @@ progress {
 /* CV SECTION */
 .Cv {
     width: 90%;
-    max-width: 800px;
+    max-width: 50em;
     text-align: center;
     margin-bottom: 10em;
     margin-top: 8em;
@@ -306,10 +311,10 @@ progress {
     box-shadow: 0 0 100px #9b109b;
     border-radius: 10px;
     padding: 1em;
-    width: 90%;
-    max-width: 600px;
-    margin-top: 2em;
-    margin-bottom: 10em;
+    width: 80%;
+    max-width: 40em;
+    margin-top: 10em;
+    margin-bottom: 5em;
 }
 
 form {
@@ -346,7 +351,6 @@ button:hover {
     background-color: #840695;
 }
 
-/* FOOTER */
 /* FOOTER */
 footer {
     width: 100%;

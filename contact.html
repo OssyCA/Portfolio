@@ -12,7 +12,7 @@
 
 <body id="body">
     <header>
-        <h1><a href="#" id="headerEasterEgg" style="text-decoration: none; color: inherit;">Ossy</a></h1>
+        <h1>Ossy</h1>
         <input type="checkbox" id="menu-toggle">
         <label for="menu-toggle" class="hamburger">&#9776;</label>
 
@@ -26,6 +26,21 @@
         </nav>
     </header>
     <main>
+        <section class="form_section" id="contact">
+            <h2>Contact</h2>
+            <form action="index.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit" id="submit">Send</button>
+
+            </form>
+        </section>
+        
+    </main>
     <footer>
         <div class="footer_links">
             <a href="https://www.linkedin.com/in/ossy-drakeneld-0aba542b8/" target="_blank">
