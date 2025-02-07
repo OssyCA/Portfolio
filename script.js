@@ -1,7 +1,8 @@
-
-// variables
+//buttons variables
 const discBtn = document.getElementById("discBtn");
 const contactBtn = document.getElementById("contactBtn");
+
+// Easter eggs variables
 const rotateEgg = document.getElementById("easterEgg");
 const headerEasterEgg = document.getElementById("headerEasterEgg");
 
@@ -39,11 +40,11 @@ function activateBlueTheme() {
 }
 
 // Easter egg blue background
-document.addEventListener("DOMContentLoaded", function () { // When the page is loaded
+document.addEventListener("DOMContentLoaded",  () => { // When the page is loaded
   const submitButton = document.querySelector("#submit");
 
   if (submitButton) {
-    submitButton.addEventListener("click", function (event) {
+    submitButton.addEventListener("click", (event) => {
       event.preventDefault(); // Prevent form submission
       activateBlueTheme();
     });
@@ -81,6 +82,8 @@ if (contactBtn) {
     window.location.href = "contact.html"
   });
 }
+
+
 
 
 console.log("Script loaded"); // remove this line once you have confirmed that the script is linked
