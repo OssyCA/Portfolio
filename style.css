@@ -140,7 +140,7 @@ main {
 }
 
 #discBtn:active {
-    transform: scale(0.1);
+    transform: scale(0.6);
 }
 
 /* ABOUT ME SECTION */
@@ -222,7 +222,7 @@ main {
 
 progress {
     width: 100%;
-    max-width: 200px; /* Adjust as needed */
+    max-width: 12.5em; 
 }
 
 /* PROJECTS SECTION */
@@ -296,10 +296,10 @@ progress {
 
 .cvlist li {
     margin: 1em 0;
-    padding: 1.5em; /* More padding for a spacious look */
+    padding: 1.5em; 
     border: 1px solid #9b109b;
-    border-radius: 10px; /* Rounded corners */
-    background: rgba(0, 0, 0, 0.1); /* Dark purple transparent background */
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.1); 
     box-shadow: 0 0 15px rgba(155, 16, 155, 0.5); /* Glow effect */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 }
@@ -311,14 +311,14 @@ progress {
 
 
 .cvlist li strong {
-    font-size: 1.2em; /* Make titles a bit larger */
-    color: #e6e6e6; /* Lighter color for contrast */
+    font-size: 1.2em; 
+    color: #e6e6e6; 
 }
 
 .cvlist li p {
     margin-top: 0.5em;
     font-size: 1em;
-    color: #cccccc; /* Slightly lighter gray for better readability */
+    color: #cccccc; 
 }
 
 /* CONTACT FORM */
@@ -475,8 +475,9 @@ footer {
     }
 
     nav ul {
-        flex-direction: column; /* Stack links on mobile */
+        flex-direction: column; 
         gap: 1em;
+        
     }
 
     nav li {
@@ -524,7 +525,6 @@ footer {
     
 }
 
-
 @media print {
     /* Remove unnecessary elements */
     .hamburger, .contactBtn, button, .footer_links .form_section{
@@ -544,7 +544,6 @@ footer {
         height: auto;
     }
 
-    /* Adjust text size for better readability */
     .projects h2, .projects h3 {
         font-size: 1.125em;
     }
@@ -580,11 +579,11 @@ footer {
     animation: rotate 0.5s ease-in-out;
 }
 .snowflake {
-    position: fixed; /* Fixed so they don't create scroll */
+    position: fixed;
     top: -10px;
     color: #fff;
     font-size: 1em;
-    user-select: none;
+    user-select: none; 
     pointer-events: none;
     animation: fall linear infinite;
     z-index: 9999;
@@ -598,7 +597,7 @@ footer {
 }
 @media (max-width: 768px) {
     .snowflake {
-        font-size: 0.3em !important; /* Smaller flakes on mobile */
+        font-size: 0.3em !important; 
     }
 }
 
