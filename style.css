@@ -502,6 +502,7 @@ footer {
     .projects {
         grid-template-columns: 1fr;
     }
+    
 
     .about_me_text, .Cv, .form_section {
         width: 100%;
@@ -513,9 +514,9 @@ footer {
 
     nav ul {
         flex-direction: column;
-        gap: 10px;
+        gap: 1em;
         width: 100%;
-        padding-top: 10px;
+        padding-top: 1em;
     }
     .h-captcha {
         transform: scale(0.7);
@@ -523,31 +524,6 @@ footer {
     
 }
 
-@media (max-width: 600px) {
-    progress {
-        max-width: 9em;
-    }
-}
-
-@media (max-width: 360px) {
-    h1 {
-        font-size: 1.3em;
-    }
-
-    nav a {
-        font-size: 1em;
-    }
-
-    .About_me img {
-        width: 8em;
-        height: 8em;
-    }
-
-    button {
-        font-size: 1em;
-        padding: 0.6em;
-    }
-}
 
 @media print {
     /* Remove unnecessary elements */
@@ -620,8 +596,6 @@ footer {
         opacity: 0; /* Disappears smoothly */
     }
 }
-
-/* Improved responsiveness for mobile */
 @media (max-width: 768px) {
     .snowflake {
         font-size: 0.3em !important; /* Smaller flakes on mobile */
