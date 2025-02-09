@@ -6,6 +6,9 @@ const contactBtn = document.getElementById("contactBtn");
 const rotateEgg = document.getElementById("easterEgg");
 const headerEasterEgg = document.getElementById("headerEasterEgg");
 
+// Form variable
+const form = document.getElementById('contactForm');
+
 // Easter egg 1337
 const sequence = ["1", "3", "3", "7"]; 
 let inputSequence = []; 
@@ -23,36 +26,8 @@ document.addEventListener("keydown", (event) => { // When a key is pressed
   }
 });
 
-// Easter egg blue background
-function activateBlueTheme() {
-  const inputNameEgg = document.querySelector("#name");
-  const inputEmail = document.querySelector("#email");
-  const inputMessage = document.querySelector("#message");
-
-  if (
-    inputNameEgg.value === "blue" &&
-    inputEmail.value === "blue" &&
-    inputMessage.value === "blue"
-  ) {
-    const body = document.querySelector("body");
-    body.style.backgroundColor = "blue";
-  }
-}
-
-// Easter egg blue background
-document.addEventListener("DOMContentLoaded",  () => { // When the page is loaded
-  const submitButton = document.querySelector("#submit");
-
-  if (submitButton) {
-    submitButton.addEventListener("click", (event) => {
-      event.preventDefault(); // Prevent form submission
-      activateBlueTheme();
-    });
-  }
-});
 
 // Easter egg rotate
-
 if (rotateEgg) {
   rotateEgg.addEventListener("click", function () {
     const section = document.querySelector("section");
@@ -82,7 +57,9 @@ if (contactBtn) {
     window.location.href = "contact.html"
   });
 }
-document.addEventListener("DOMContentLoaded", function () {
+
+// Snowflake animation
+document.addEventListener("DOMContentLoaded",  () => {
   if (window.location.pathname.includes("index.html") || window.location.pathname === "/") {
 
       function createSnowflake() {
@@ -117,6 +94,19 @@ document.addEventListener("DOMContentLoaded", function () {
       setInterval(createSnowflake, intervalTime);
   }
 });
+
+if(form) {
+  form.addEventListener('submit', function(e) {
+
+    const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+
+    if (!hCaptcha) {
+        e.preventDefault();
+        alert("Please fill out captcha field")
+        return
+    }
+});
+}
 
 
 console.log("Script loaded"); // remove this line once you have confirmed that the script is linked

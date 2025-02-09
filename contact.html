@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <script src="https://kit.fontawesome.com/cb19c9f494.js" crossorigin="anonymous"></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
 </head>
 
 <body id="body">
@@ -30,7 +31,8 @@
         <div class="contactContainer">
             <section class="form_section" id="contact">
                 <h2>Contact</h2>
-                <form action="index.php" method="post">
+                <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+                    <input type="hidden" name="access_key" value="0a3bcde9-cd03-4068-ad4f-cf2ce52f85c8">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
                     <label for="email">Email:</label>
@@ -38,6 +40,7 @@
                     <label for="message">Message:</label>
                     <textarea id="message" name="message" required></textarea>
                     <button type="submit" id="submit">Send</button>
+                    <div class="h-captcha" data-captcha="true"></div>
                 </form>
             </section>
     
