@@ -1,9 +1,4 @@
 
-
-//buttons variables
-const discBtn = document.getElementById("discBtn");
-const contactBtn = document.getElementById("contactBtn");
-
 // Easter eggs variables
 const rotateEgg = document.getElementById("easterEgg");
 const headerEasterEgg = document.getElementById("headerEasterEgg");
@@ -48,17 +43,18 @@ if (headerEasterEgg) {
   });
 }
 
-if (discBtn) {
-  discBtn.addEventListener("click", () => {
-    window.location.href = "about.html"
-  });
+function setupNavigation(buttonId, targetPage) {
+  const button = document.getElementById(buttonId);
+  if (button) {
+    button.addEventListener("click", () => {
+      window.location.href = targetPage;
+    });
+  }
 }
 
-if (contactBtn) {
-  contactBtn.addEventListener("click", () => {
-    window.location.href = "contact.html"
-  });
-}
+setupNavigation("discBtn", "about.html");
+setupNavigation("contactBtn", "contact.html");
+
 
 if(form) {
   form.addEventListener('submit', function(e) {
