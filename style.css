@@ -277,6 +277,13 @@ progress {
     text-decoration: none;
     font-weight: bold;
 }
+.popupImg {
+    width: 100%;  
+    max-width: 25em; 
+    height: auto;
+    border-radius: 0.625em;
+    margin-top: 1em;
+}
 
 
 /* CV SECTION */
@@ -505,7 +512,9 @@ footer {
     .projects {
         grid-template-columns: 1fr;
     }
-    
+    .popupImg {
+        max-width: 80%;
+    }
 
     .about_me_text, .Cv, .form_section {
         width: 100%;
@@ -529,8 +538,9 @@ footer {
 
 @media print {
     /* Remove unnecessary elements */
-    .hamburger, .contactBtn, button, .footer_links .form_section{
-        display: none;
+    .hamburger, .contactBtn, button, .footer_links, .form_section, 
+    .foodpop, .gamePopup, .netBankPopup, .sqlPopup {
+        display: none !important;
     }
 
     /* Make projects visible and avoid page breaks */
