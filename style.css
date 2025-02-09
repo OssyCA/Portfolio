@@ -28,22 +28,14 @@ h1 {
     font-size: 1.8em;
 }
 
-section{
-    border: 1px solid #9b109b;
-    box-shadow: 0 0 20px #9b109b;
-    border-radius: 10px;
+section {
+    border: 0.1em solid #9b109b;
+    box-shadow: 0 0 2em #9b109b;
+    border-radius: 1em;
     padding: 1em;
-    max-width: 1000px;
+    max-width: 62.5em; 
     width: 100%;
-    margin: 0 auto ;
-}
-
-/* CONTAINER*/
-.container {
-    width: 100%;
-    max-width: 50em; 
     margin: 0 auto;
-    padding: 1em;
 }
 
 /* HEADER */
@@ -122,7 +114,7 @@ main {
 
 /* INDEX SECTION */
 .welcomeHeader{
-    font-family: 'Pacifico', cursive; /* Ändra fonten */
+    font-family: 'Pacifico', cursive; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -268,8 +260,8 @@ progress {
     left: 0;
     width: 100%;
     color: rgb(243, 243, 243);
-    padding: 10px;
-    border-radius: 5px;
+    padding: 1em;
+    border-radius: 0.5em;
     z-index: 1000;
 }
 
@@ -553,21 +545,46 @@ footer {
     }
 }
 
-@media print{
-    .hamburger, .contactBtn, button { /* Hide hamburger, contact button and form button on print */
+@media print {
+    /* Remove unnecessary elements */
+    .hamburger, .contactBtn, button, .footer_links .form_section{
         display: none;
     }
-    .form_section {
-        display: none;
+
+    /* Make projects visible and avoid page breaks */
+    .projects div {
+        display: block;
+        page-break-inside: avoid;
+        margin-bottom: 1.25em;
     }
-    .footer_links {
-        display: none;
+
+    /* Ensure images look good when printed */
+    .projects img {
+        max-width: 100%;
+        height: auto;
     }
-    .About_me img {
-        width: 5em;
-        height: 5em;
+
+    /* Adjust text size for better readability */
+    .projects h2, .projects h3 {
+        font-size: 1.125em;
+    }
+
+    /* Remove scroll on popup windows */
+    .foodpop, .gamePopup, .netBankPopup, .sqlPopup {
+        position: static;
+        display: block;
+        overflow: visible;
+        max-height: none;
+        width: 100%;
+    }
+
+    /* Adjust body and container to prevent scroll */
+    body, html {
+        height: auto;
+        overflow: visible;
     }
 }
+
 /* ANIMATIONS/Easteregg */
 
 @keyframes rotate {
@@ -603,7 +620,7 @@ footer {
 /* Improved responsiveness for mobile */
 @media (max-width: 768px) {
     .snowflake {
-        font-size: 8px !important; /* Smaller flakes on mobile */
+        font-size: 0.3em !important; /* Smaller flakes on mobile */
     }
 }
 
