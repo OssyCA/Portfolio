@@ -109,4 +109,4 @@ if(form) {
 }
 
 
-console.log("Script loaded"); // remove this line once you have confirmed that the script is linked
+// console.log("Script loaded"); // remove this line once you have confirmed that the script is linked
