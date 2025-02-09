@@ -41,7 +41,7 @@ section{
 /* CONTAINER TO KEEP CONTENT CENTERED */
 .container {
     width: 100%;
-    max-width: 1200px; /* Prevents content from stretching too wide */
+    max-width: 50em; 
     margin: 0 auto;
     padding: 1em;
 }
@@ -60,7 +60,7 @@ header {
     z-index: 1000;
 }
 
-/* NAVIGATION - Horizontal on large screens */
+/* NAVIGATION */
 nav {
     display: flex;
 }
@@ -87,6 +87,14 @@ nav a:hover {
     color: #ff00ff;
     text-shadow: 0px 0px 8px rgba(255, 0, 255, 0.8);
 }
+
+#navbar.active {
+    color: #f710bd;
+    font-weight: bold;
+    text-shadow: 0 0 1em #f710bd;
+}
+
+
 
 /* HAMBURGER ICON */
 .hamburger {
@@ -303,13 +311,12 @@ progress {
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 }
 
-/* Hover effect for better interactivity */
 .cvlist li:hover {
     transform: translateY(-5px); /* Lift up on hover */
     box-shadow: 0 0 20px rgba(155, 16, 155, 0.8);
 }
 
-/* Text improvement in the list */
+
 .cvlist li strong {
     font-size: 1.2em; /* Make titles a bit larger */
     color: #e6e6e6; /* Lighter color for contrast */
@@ -399,8 +406,8 @@ footer {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 10px 0;
-    box-shadow: 0px -2px 10px rgba(120, 24, 120, 0.5);
+    padding: 0.7em 0;
+    box-shadow: 0px -0.12em 0.6em rgba(120, 24, 120, 0.5);
 }
 
 .footer_links {
@@ -424,7 +431,7 @@ footer {
     left: 50%;
     bottom: -5px;
     width: 0;
-    height: 2px;
+    height: 0.1em;
     background: #ffffff;
     transition: all 0.3s ease-in-out;
     transform: translateX(-50%);
@@ -574,3 +581,28 @@ footer {
 .rotate-animation {
     animation: rotate 0.5s ease-in-out;
 }
+.snowflake {
+    position: fixed; /* Fixed so they don't create scroll */
+    top: -10px;
+    color: #fff;
+    font-size: 1em;
+    user-select: none;
+    pointer-events: none;
+    animation: fall linear infinite;
+    z-index: 9999;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+        opacity: 0; /* Disappears smoothly */
+    }
+}
+
+/* Improved responsiveness for mobile */
+@media (max-width: 768px) {
+    .snowflake {
+        font-size: 8px !important; /* Smaller flakes on mobile */
+    }
+}
+

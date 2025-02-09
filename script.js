@@ -82,8 +82,41 @@ if (contactBtn) {
     window.location.href = "contact.html"
   });
 }
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.location.pathname.includes("index.html") || window.location.pathname === "/") {
 
+      function createSnowflake() {
+          const snowflake = document.createElement("div");
+          snowflake.innerHTML = "❄";
+          snowflake.classList.add("snowflake");
+          document.body.appendChild(snowflake);
 
+          // Adjust size and number of flakes depending on screen size
+          let screenWidth = window.innerWidth;
+          let maxWidth = screenWidth * 0.95; // Max 95% of screen width
+
+          // Smaller flakes on mobile, larger on desktop
+          let size = screenWidth < 768 ? Math.random() * 10 + 5 + "px" : Math.random() * 15 + 10 + "px";
+          
+          // Adjust fall speed - slower on larger screens
+          let duration = screenWidth < 768 ? Math.random() * 3 + 2 : Math.random() * 5 + 3; 
+
+          snowflake.style.left = Math.random() * maxWidth + "px";
+          snowflake.style.fontSize = size;
+          snowflake.style.opacity = Math.random() * 0.8 + 0.2;
+          snowflake.style.animationDuration = duration + "s";
+
+          // Remove snowflakes after they have fallen
+          setTimeout(() => {
+              snowflake.remove();
+          }, duration * 1000);
+      }
+
+      // Adjust frequency of flakes depending on screen size (mobile = fewer flakes)
+      let intervalTime = window.innerWidth < 768 ? 500 : 300; // Mobile: 500ms, Desktop: 300ms
+      setInterval(createSnowflake, intervalTime);
+  }
+});
 
 
 console.log("Script loaded"); // remove this line once you have confirmed that the script is linked
