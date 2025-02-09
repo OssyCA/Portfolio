@@ -513,7 +513,7 @@ footer {
         grid-template-columns: 1fr;
     }
     .popupImg {
-        max-width: 80%;
+        max-width: 50%;
     }
 
     .about_me_text, .Cv, .form_section {
